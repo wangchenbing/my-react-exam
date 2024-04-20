@@ -1,4 +1,4 @@
-name: NodeJS with Webpack
+- name: 打包项目
 
 on:
   push:
@@ -7,11 +7,14 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  npm-build:
+    - name: Build工作
     runs-on: ubuntu-latest
     steps:
+    - name: 读取内容
     - uses: actions/checkout@v4
-    - name: Build
+
+    - name: 安装依赖
       run: |
         npm install
         npm run build
