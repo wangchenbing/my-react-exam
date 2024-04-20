@@ -9,6 +9,7 @@ jobs:
   npm-build:
     name: Build工作
     runs-on: ubuntu-latest
+
     steps:
     - name: 读取内容
       uses: actions/checkout@v4
@@ -19,8 +20,8 @@ jobs:
         npm run build
 
     - name: 部署
-     uses: JamesIves/github-pages-deploy-action@v4
-     with:
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
         branch: gh-pages
         folder: build
 
