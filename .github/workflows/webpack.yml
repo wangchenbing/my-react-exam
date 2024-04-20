@@ -1,4 +1,4 @@
-- name: 打包项目
+name: 打包项目
 
 on:
   push:
@@ -8,11 +8,11 @@ on:
 
 jobs:
   npm-build:
-    - name: Build工作
+    name: Build工作
     runs-on: ubuntu-latest
     steps:
     - name: 读取内容
-    - uses: actions/checkout@v4
+      uses: actions/checkout@v4
 
     - name: 安装依赖
       run: |
